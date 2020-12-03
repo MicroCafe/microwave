@@ -57,29 +57,25 @@ schemaform.info =
         "version" : {
           "title": "Document Version",
           "type": "string"
-        },
-		"servers" : {
-		  "title": "Servers",
-		  "type": "array",
-		  "items" : {
-			"type" : "object",
-			"properties" : {
-			  "url" : {
-				"title" : "URL",
-				"type" : "string"
-			  },
-			  "description" : {
-				"title" : "Description",
-				"type" : "string"
-			  }
-			}
-		  }
-		}
+        }
       }
     },
     "servers" : {
-      "title": "Servers",
-      "type": "string"
+	  "title": "Servers",
+	  "type": "array",
+	  "items" : {
+		"type" : "object",
+		"properties" : {
+		  "url" : {
+			"title" : "URL",
+			"type" : "string"
+		  },
+		  "description" : {
+			"title" : "Description",
+			"type" : "string"
+		  }
+		}
+	  }
     }
   },
   "form" : [
