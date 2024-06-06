@@ -57,29 +57,25 @@ schemaform.info =
         "version" : {
           "title": "Document Version",
           "type": "string"
-        },
-		"servers" : {
-		  "title": "Servers",
-		  "type": "array",
-		  "items" : {
-			"type" : "object",
-			"properties" : {
-			  "url" : {
-				"title" : "URL",
-				"type" : "string"
-			  },
-			  "description" : {
-				"title" : "Description",
-				"type" : "string"
-			  }
-			}
-		  }
-		}
+        }
       }
     },
     "servers" : {
-      "title": "Servers",
-      "type": "string"
+	  "title": "Servers",
+	  "type": "array",
+	  "items" : {
+		"type" : "object",
+		"properties" : {
+		  "url" : {
+			"title" : "URL",
+			"type" : "string"
+		  },
+		  "description" : {
+			"title" : "Description",
+			"type" : "string"
+		  }
+		}
+	  }
     }
   },
   "form" : [
@@ -87,4 +83,38 @@ schemaform.info =
     "info",
     "servers"
     ]
-}
+};
+
+schemaform.info_editor = {
+	"schema": {
+		"language": {
+			"type": "string",
+			"enum": [ "JSON", "YAML" ]
+		},
+		"jsonoutput": {
+		  "type": "string",
+		},
+		"yamloutput": {
+		  "type": "string",
+		},
+	},
+	"form": [{
+		"key": "language",
+		"title": "Output",
+		"type": "radiobuttons",
+		"activeClass": "btn-success"
+	},{
+		"key": "jsonoutput",
+		"title": " ",
+		"type": "textarea",
+		"height": "400px"
+    },{
+		"key": "yamloutput",
+		"title": " ",
+		"type": "textarea",
+		"height": "400px"
+    }],
+	"value" : {
+		"language" : "JSON"
+	}
+};
